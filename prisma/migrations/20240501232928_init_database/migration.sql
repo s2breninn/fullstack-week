@@ -3,7 +3,7 @@ CREATE TABLE "Restaurant" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "imageUrl" TEXT NOT NULL,
-    "delivery" DECIMAL(10,2) NOT NULL,
+    "deliveryFee" DECIMAL(10,2) NOT NULL,
     "deliveryTimeMinutes" INTEGER NOT NULL,
 
     CONSTRAINT "Restaurant_pkey" PRIMARY KEY ("id")
@@ -14,6 +14,7 @@ CREATE TABLE "Category" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "imageUrl" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Category_pkey" PRIMARY KEY ("id")
 );
@@ -24,10 +25,11 @@ CREATE TABLE "Product" (
     "name" TEXT NOT NULL,
     "description" TEXT NOT NULL,
     "imageUrl" TEXT NOT NULL,
-    "delivery" DECIMAL(10,2) NOT NULL,
+    "price" DECIMAL(10,2) NOT NULL,
     "discountPercentage" INTEGER NOT NULL DEFAULT 0,
     "restaurantId" TEXT NOT NULL,
     "categoryId" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Product_pkey" PRIMARY KEY ("id")
 );
