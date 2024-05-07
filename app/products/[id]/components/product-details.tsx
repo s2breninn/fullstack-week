@@ -45,7 +45,7 @@ const ProductDetails = ({ product, complementaryProducts }: ProductDetailProps) 
                         className="rounded-full object-cover"
                     />
                 </div>
-                <span className="text-xs text-muted-foreground">{product.name}</span>
+                <span className="text-xs text-muted-foreground">{product.restaurant.name}</span>
             </div>
 
             <h1 className="font-semibold text-xl px-5 mb-2 mt-1">{product.name}</h1>
