@@ -34,7 +34,7 @@ const ProductDetails = ({ product, complementaryProducts }: ProductDetailProps) 
     })
     
     return (  
-        <div className="py-5">
+        <div className="py-5 rounded-tl-3xl rounded-tr-3xl bg-white mt-[-1.5rem] z-50 relative">
             {/*/Nome restaraunte*/}
             <div className="flex items-center px-5 gap-[0.375rem]">
                 <div className="relative h-6 w-6">
